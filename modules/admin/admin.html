@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="sk-SK">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Libera Terra - ADMIN</title>
+       
+        <link rel="icon" href="../../images/favicon.ico">
+       
+       	<!-- CSS -->
+        <link rel="stylesheet" href="../../css/w3.css">
+        <link rel="stylesheet" href="../../css/w3-theme-liberaterra.css">
+        <link rel="stylesheet" href="../../css/font-awesome_4.7.0.min.css">
+        <link rel="stylesheet" href="../../css/w3lt.css">
+        
+        <!-- LIBS -->
+        <script src="./../../libs/sha256.js"></script>
+        <script src="./../../libs/client.min.js"></script>
+        <script src="./../../libs/jquery-3.4.1.min.js"></script>
+        
+        
+        <!-- SCRIPT MODULE -->
+        <script src="../general/general.js"></script>
+        <script src="../general/calls.js"></script>
+        <script src="./admin.js"></script>
+        
+        <!-- START -->
+        <script>
+        	$( document ).ready(function() {
+    					fncAdmin_start();
+    					
+    					
+    					
+    					//show time		
+    					setInterval(function(){ 
+    						var myDateObj = new Date()
+    						var myTime = myDateObj.getHours() + ":" + myDateObj.getMinutes().toString().padStart(2, "0") + ":" + myDateObj.getSeconds().toString().padStart(2, "0");
+    						
+										document.getElementById('currentTime_ID').innerHTML = myTime;	
+    					}, 1000);
+    					
+					});
+					
+					
+					
+        </script>
+        
+        
+    </head>
+    
+    	<body class="w3-theme-l5">
+    
+    		<!-- LOADER -->
+		    <div id="generalLoader" class="loaderContainer w3-hide" style="z-index:10000;">
+				    <div class="loader" ></div>
+				</div>   
+				
+				<!-- MODAL INFO -->
+				<div id="generalModalInfo" class="w3-modal w3-animate-opacity">
+			    <div class="w3-modal-content w3-card-4 w3lt-border-red">
+			      <header class="w3-container w3-theme-d5"> 
+			        	<span onclick="fncGeneral_modalInfoHide()" class="w3-button w3-large" style="position: absolute; right: 0px;">&times;</span>
+			      </header>
+			      <div id="generalModalInfo_content" class="w3-container">
+			        
+			      </div>
+			    </div>
+			  </div>
+		    
+    
+				<!-- PAGE -->
+				<div class="w3-content" style="max-width:1200px;">
+    	
+    				<!-- HEADER -->
+		    		<div class="w3-display-topleft w3-theme-d4" style="width:100%;" >
+			  			<div id="headerBar_ID" class="w3-container w3-padding">
+			    			<div class="w3-right">
+			    				<span id="loggedUser_ID"></span>&nbsp;&nbsp;&nbsp;
+			    				<i class="fa fa-user-o" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i>
+			    				<span id='currentTime_ID' ></span>
+			    			</div>
+				 	 		</div>
+				 	 	</div> <!-- HEADER END -->
+    	
+    				<div class="w3-display-topleft w3-container">
+	    				<img src="../../images/logo_web.png" class="" alt="Superschopnosti">
+	    			</div>
+    	
+    	
+    				<!-- CONTENT -->
+  					<div class="w3-display-middle">
+					 	
+					 		<div id="errorMessage_ID" class="w3-panel w3-orange w3-hide">
+							  <b><p style="text-align: center;"></p></b>
+							</div> 
+							
+							<div id="successMessage_ID" class="w3-panel w3-green w3-hide">
+							  <b><p style="text-align: center;"></p></b>
+							</div> 
+					 	
+					 		<div id="adminSelectButtons" class="w3-bar">
+    						<button id="btnTab_Parent_ID" class="w3-button w3lt-tab-button-frame w3-bar-item tablink w3-theme-l4 onclik">Rodič</button>
+  						</div>		 	
+					 	
+					 	
+					 		<div id="parentForm_ID" class="w3-card-2 container w3-theme-l4">
+					 
+					 				<label for="email"><b>E-mail</b></label>
+							    <input id="email_ID" tabindex="1" type="text" placeholder="Zadaj email" name="email" required autocomplete="email">
+
+							 	  <label for="username"><b>Prihlasovacie meno (nepovinné)</b></label>
+							    <input id="username_ID" tabindex="2" type="text" placeholder="Zadaj prihlasovacie meno" name="username">
+									
+							    <label for="password"><b>Heslo</b></label>
+							    <input id="password_ID" tabindex="3" type="password" placeholder="Zadaj heslo" name="password" required autocomplete="current-password">
+							    <input id="password2_ID" tabindex="4" type="password" placeholder="Zadaj znova heslo" name="password" required autocomplete="current-password">
+							        
+							    <div class="w3-bar">
+							    	<button id="btnSubmitParent_ID" tabindex="5" class="w3-theme-d3 w3-half w3-left" type="submit">Zmeniť</button>
+							    	<button tabindex="6" class=" w3-quarter w3-red w3-right" type="button" onclick="document.getElementById('parentModal').style.display='block'">Zmazať</button>
+							 		</div>
+							 
+							</div>
+							
+							<div id="childForm_ID" class="w3-card-2 container w3-theme-l4 w3-hide">
+					 				<input id="childid_ID" type="hidden" name="childid">
+					 				
+					 				<label for="firstname"><b>Meno</b></label>
+							    <input id="firstname_ID" tabindex="1" type="text" placeholder="Zadaj meno" name="firstname" required autocomplete="firstname">
+							    
+							   
+							 	  <label for="username"><b>Prihlasovacie meno</b></label>
+							    <input id="childUsername_ID" tabindex="2" type="text" placeholder="Zadaj prihlasovacie meno" name="username">
+									
+							    <label for="password"><b>Heslo</b></label>
+							    <input id="childPassword_ID" tabindex="3" type="text" placeholder="Zadaj heslo" name="password" required autocomplete="current-password">
+							    
+							    <label for="class"><b>Ročník</b></label>
+							    <select id="class_ID" tabindex="4" class="w3-select" name="class" style="text-indent: 15px;">
+									  	<option value="1">1. ročník</option>
+									  	<option value="2">2. ročník</option>
+									  	<option value="3">3. ročník</option>
+									  	<option value="4">4. ročník</option>
+									  	<option value="5">5. ročník</option>
+									  	<option value="6">6. ročník</option>
+									  	<option value="7">7. ročník</option>
+									  	<option value="8">8. ročník</option>
+									  	<option value="9">9. ročník</option>
+									</select>
+							    
+							        
+							    <div class="w3-bar">
+							    	
+							    	<button id="btnSubmitChild_ID" tabindex="5" class="w3-theme-d3 w3-half w3-left" type="submit">Zmeniť</button>
+							    	<button id="btnAddChild_ID" tabindex="6" class="w3-theme-d3 w3-half w3-left w3-hide" type="submit">Zaregistrovať</button>
+							    	<button id="btnRemoveChild_ID" tabindex="7" class=" w3-quarter w3-red w3-right" type="button" >Zmazať</button>
+							    	
+							 		</div>
+							 
+							</div>
+							
+							<div class="w3-bar w3-display-container" style="width : 100% !important;">
+    						<button id="btnTab_Parent_Dashboard_ID" class="w3-bar-item tablink w3-theme-d3 w3-topleft" onclick="fncGeneralRedirectWithSessionID(gURL_MODULE_dashboard)">Štatistiky</button>
+    						<!-- <button id="btnTab_Parent_Payment_ID" class="w3-bar-item tablink w3-theme-d3 w3-display-topmiddle">Platba</button> -->
+    						<button id="btnTab_Parent_Logout_ID" class="w3-bar-item tablink w3-theme-d3 w3-display-topright" onclick="fncGeneralRedirectWithSessionID(gURL_MODULE_login)">Koniec</button>
+  						</div>		
+					 	
+					 
+						</div> <!-- CONTENT END -->
+
+						<!-- The parentModal -->
+						<div id="parentModal" class="w3-modal w3-animate-opacity">
+						  <div class="w3-modal-content">
+						    <div class="w3-container">
+						      <h3 style="text-align: center;">Chcete určite zmazať celé konto?</h3>
+						      <div style="text-align: center;">
+						      	<button id="parentModal_btnDeleteParent_ID" class="w3-bar w3-red" style="width: auto;">Áno</button>
+						      	<button class="w3-bar w3-theme-d3" style="width: auto;"	onclick="document.getElementById('parentModal').style.display='none'">Nie</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						
+						<!-- The childModal -->
+						<div id="childModal" class="w3-modal w3-animate-opacity">
+						  <div class="w3-modal-content">
+						    <div class="w3-container">
+						      <h3 style="text-align: center;">Chcete určite zmazať údaje o Vašom dietati?</h3>
+						      <div style="text-align: center;">
+						      	<button id="childModal_btnYes_ID" class="w3-bar w3-red" style="width: auto;">Áno</button>
+						      	<button id="childModal_btnNo_ID" class="w3-bar w3-theme-d3" style="width: auto;"	onclick="document.getElementById('childModal').style.display='none'">Nie</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					
+						<!-- FOOTER -->
+						<div class="w3-display-bottomleft w3-theme-d4" style="width:100%;">
+			  			<div id="footerBar_ID" class="w3-container w3-padding w3-theme-d5">
+			  					<span class="w3-right">&nbsp</span>
+				 	 		</div>
+				 	 	</div> <!-- FOOTER END -->
+    	
+						
+			</div>	<!-- PAGE END -->
+			
+
+       
+    </body>
+</html>

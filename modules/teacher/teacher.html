@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="sk-SK">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Libera Terra - DASHBOARD</title>
+       
+        <link rel="icon" href="../../images/favicon.ico">
+       
+       	<!-- CSS -->
+        <link rel="stylesheet" href="../../css/w3.css">
+        <link rel="stylesheet" href="../../css/w3-theme-liberaterra.css">
+        <link rel="stylesheet" href="../../css/font-awesome_4.7.0.min.css">
+        <link rel="stylesheet" href="../../css/w3lt.css">
+        <link rel="stylesheet" href="../../css/apexcharts.css">
+        
+        <!-- LIBS -->
+        <script src="./../../libs/sha256.js"></script>
+        <script src="./../../libs/client.min.js"></script>
+        <script src="./../../libs/jquery-3.4.1.min.js"></script>
+        <script src="./../../libs/apexcharts.min.js"></script>
+        
+        
+        <!-- SCRIPT MODULE -->
+        <script src="../general/general.js"></script>
+        <script src="../general/calls.js"></script>
+        <script src="./teacher.js"></script>
+        
+        <!-- START -->
+        <script>
+        	$( document ).ready(function() {
+    					fncDashboard_start();
+    					
+    					//show time		
+    					setInterval(function(){ 
+    						var myDateObj = new Date()
+    						var myTime = myDateObj.getHours() + ":" + myDateObj.getMinutes().toString().padStart(2, "0") + ":" + myDateObj.getSeconds().toString().padStart(2, "0");
+    						
+										document.getElementById('currentTime_ID').innerHTML = myTime;	
+    					}, 1000);
+    					
+					});
+					
+					
+					
+        </script>
+        
+        
+    </head>
+    
+    	<body class="w3-theme-l5">
+    
+    		<!-- LOADER -->
+		    <div id="generalLoader" class="loaderContainer w3-hide" style="z-index:10000;">
+				    <div class="loader" ></div>
+				</div>   
+				
+				<!-- MODAL INFO -->
+				<div id="generalModalInfo" class="w3-modal w3-animate-opacity">
+			    <div class="w3-modal-content w3-card-4 w3lt-border-red">
+			      <header class="w3-container w3-theme-d5"> 
+			        	<span onclick="fncGeneral_modalInfoHide()" class="w3-button w3-large" style="position: absolute; right: 0px;">&times;</span>
+			      </header>
+			      <div id="generalModalInfo_content" class="w3-container">
+			        
+			      </div>
+			    </div>
+			  </div>
+		    
+    
+				<!-- PAGE -->
+				<div class="w3-content" style="max-width:1200px;">
+    	
+    				<!-- HEADER -->
+		    		<div class="w3-display-topleft w3-theme-d4" style="width:100%;" >
+			  			<div id="headerBar_ID" class="w3-container w3-padding">
+			    			<div class="w3-right">
+			    				<span id="loggedUser_ID"></span>&nbsp;&nbsp;&nbsp;
+			    				<i class="fa fa-user-o" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i>
+			    				<span id='currentTime_ID' ></span>
+			    			</div>
+				 	 		</div>
+				 	 	</div> <!-- HEADER END -->
+    	
+    				<div class="w3-display-topleft w3-container">
+	    				<img src="../../images/logo_web.png" class="" alt="Testovanie">
+	    			</div>
+    	
+    	
+    				<!-- CONTENT -->
+  					<div id="dashboardContent_ID" class="w3-display-middle">
+  						
+  						<div id="errorMessage_ID" class="w3-panel w3-orange w3-hide">
+							  <b><p style="text-align: center;"></p></b>
+							</div> 
+  						
+								<div class="w3-row">
+									
+									 <div class="w3-half w3-container">
+									 		<div style="white-space: nowrap;">
+									    	<div style="display: inline-block;">Trieda:</div>
+												<select id="dashboardClassesSelector_ID"  onchange="fncDashboard_changeClass()" tabindex="2" class="w3-select" name="class" style="display: inline-block; text-indent: 15px; width: 20%;"></select>    
+											</div>
+									  </div>
+									
+									 <div class="w3-half w3-container">
+									 		<div style="white-space: nowrap;">
+									    	<div style="display: inline-block;">Žiak:</div>
+												<select id="dashboardClassChildrenSelector_ID"  onchange="fncDashboard_changeStudent()" tabindex="3" class="w3-select" name="class" style="display: inline-block; text-indent: 15px; width: 80%">	</select>
+											</div>
+									  </div>
+									
+								</div>	
+							
+							<div id="dashboardChildDataVisual_ID" class="w3-card-2">	 	
+								<div id="dashboardChilExerciseSelectorDiv_ID" style="text-align:center;">
+									<select id="dashboardChilExerciseSelector_ID"  tabindex="4" class="w3-select" name="class" style="text-indent: 15px; width: 50%">
+
+									</select>
+								</div>					 	
+						 	
+								<div id="chart" style="width:60vw; margin: auto;"></div>
+								
+								<div id="dashboardSumResults_ID">
+									<div>
+										<div>
+											<p class="text"><span style="background: #a9c3dc;"></span>Všetky odpovede:</p>
+											<p class="result"></p>
+										</div>
+										<div>
+											<p class="text"><span style="background: #5488c2;"></span>Správne odpovede:</p>
+											<p class="result"></p>
+										</div>
+										<div>
+											<p class="text"><span style="background: red;"></span>Celkový čas:</p>
+											<p class="result"></p>
+										</div>
+									</div>
+								</div>
+								
+						 	</div>
+						 	
+						 	
+						 	<div class="w3-bar w3-display-container" style="width : 100% !important;">
+    						<button id="btnTab_Teacher_Nothing_ID" class="w3-bar-item tablink w3-theme-d3 w3-topleft" onclick="">X</button>
+    						<button id="btnTab_Teacher_Logout_ID" class="w3-bar-item tablink w3-theme-d3 w3-display-topright" onclick="fncGeneralRedirectWithSessionID(gURL_MODULE_login)">Koniec</button>
+  						</div>		
+  						
+  						
+						 	
+					 
+						</div> <!-- CONTENT END -->
+					
+						<!-- FOOTER -->
+						<div class="w3-display-bottomleft w3-theme-d4" style="width:100%;">
+			  			<div id="footerBar_ID" class="w3-container w3-padding w3-theme-d5">
+			  					<span class="w3-right">&nbsp</span>
+				 	 		</div>
+				 	 	</div> <!-- FOOTER END -->
+    	
+						
+			</div>	<!-- PAGE END -->
+			
+
+       
+    </body>
+</html>

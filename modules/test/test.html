@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="sk-SK">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Libera Terra - TEST</title>
+       
+        <link rel="icon" href="../../images/favicon.ico">
+       
+       	<!-- CSS -->
+        <link rel="stylesheet" href="../../css/w3.css">
+        <link rel="stylesheet" href="../../css/w3-theme-liberaterra.css">
+        <link rel="stylesheet" href="../../css/font-awesome_4.7.0.min.css">
+        <link rel="stylesheet" href="../../css/w3lt_test.css">
+        
+		
+        <!-- MATH LIBS -->
+				<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script> -->
+				
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>		
+				
+				
+				
+        <!-- LIBS -->
+        <script src="./../../libs/jquery-3.4.1.min.js"></script>
+        <script src="./../../libs/client.min.js"></script>
+         
+        <!-- SCRIPT MODULE -->
+        <script src="../general/general.js"></script>
+        <script src="../general/calls.js"></script>
+				<script src="./test.js"></script>
+        
+        <!-- START -->
+        <script>
+        	$( document ).ready(function() {
+    					fncTest_start();
+    					
+    					//show time		
+    					setInterval(function(){ 
+    						var myDateObj = new Date()
+    						var myTime = myDateObj.getHours() + ":" + myDateObj.getMinutes().toString().padStart(2, "0") + ":" + myDateObj.getSeconds().toString().padStart(2, "0");
+    						
+										document.getElementById('currentTime_ID').innerHTML = myTime;	
+										
+										
+										// MathJax configuration
+										 MathJax.Hub.Config({
+											  CommonHTML: {
+											    scale: 90
+											  }
+											});
+										
+										
+    					}, 1000);  		
+    					
+					});
+										
+        </script>
+       
+			
+        
+    </head>
+    
+    <body class="w3-theme-l5">
+    	
+    	<!-- LOADER -->
+		    <div id="generalLoader" class="loaderContainer w3-hide" style="z-index:10000;">
+				    <div class="loader" ></div>
+				</div>   
+				
+				<!-- MODAL INFO -->
+				<div id="generalModalInfo" class="w3-modal w3-animate-opacity">
+			    <div class="w3-modal-content w3-card-4 w3lt-border-red">
+			      <header class="w3-container w3-theme-d5"> 
+			        	<span onclick="fncGeneral_modalInfoHide()" class="w3-button w3-large" style="position: absolute; right: 0px;">&times;</span>
+			      </header>
+			      <div id="generalModalInfo_content" class="w3-container">
+			        
+			      </div>
+			    </div>
+			  </div>
+    	
+    	<!-- PAGE -->
+				<div class="w3-content" style="max-width:100000px">
+    	
+    				<!-- HEADER -->
+		    		<div class="w3-top w3-theme-d4" style="width:100%;" >
+			  			<div id="headerBar_ID" class="w3-container w3-padding">
+			    			<div class="w3-right">
+								<span id="loggedUser_ID"></span>&nbsp;&nbsp;&nbsp;
+			    				<i class="fa fa-file-o" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i>
+			    				<span id='currentTime_ID' ></span>
+			    			</div>
+				 	 		</div>
+				 	 	</div> <!-- HEADER END -->
+    
+    
+      			<!-- CONTENT 'ZACIATOK' -->	
+	    			<div id="testStartPage" class="w3-display-topmiddle w3-hide">
+	    					<br>
+	    					<br>
+		    				<div class="w3-theme-l5">
+		    						<h2 id="startPage_TestName_id" class="w3lt-text-centre"><b>TEST_NAME</b></h2>
+		    						<h3 class="w3lt-text-centre">Interaktívny test</h3>
+		    						<i><h6 id="startPage_TestPopis_id" class="w3lt-text-centre"></h6></i>		    						
+		    				  	<br>
+		    				  	<br>
+		    				  	<div class="w3lt-text-centre" >
+											<button id="testButtonBegin_ID" class="w3-theme-d5" type="button" >&nbsp;&nbsp;Začať&nbsp;&nbsp;</button>
+											<br>
+											<br>
+											<img src="../../images/logo libera terra.svg" class="lt_logo" alt="Libera Terra">
+										</div>
+		  					</div>
+		  					<br>
+								<br>	
+	    			</div><!-- CONTENT 'ZACIATOK' END -->	
+	    		
+	    			<!-- CONTENT 'TEST' -->	
+	    			<div id="testPage" class="w3-display-topmiddle w3-hide">
+	    					<br>
+	    					<br>
+	    					<br>
+		    				<div class="w3-theme-l5">
+		    						<div class="w3lt-text-centre" >
+		    				  		<button id="testButtonPrevious_ID" class="w3-theme-d5" type="button" >&nbsp;<&nbsp;</button>
+		    				  		<span id="testPage_Counter_id" class="w3lt-text-left">COUNTER</span>
+											<button id="testButtonNext_ID" class="w3-theme-d5" type="button" >&nbsp;>&nbsp;</button>
+											<button id="testButtonEvaluate_ID" class="w3-theme-d5" type="button">&nbsp;Vyhodnoť&nbsp;</button>
+										</div>
+										<br>
+		    						<h6 id="testPage_Zadanie_id" class="w3lt-text-left_width">ZADANIE</h6>
+		    						
+		    						
+		    						<br>	
+		    						<div id="dynamic-pan"></div>
+		    							
+									
+		    						<h6 class="w3lt-text-left" >&nbsp;<button id="testButtonAnswer_id_0" class="w3-theme-d5" type="button" >&nbsp;A&nbsp;</button><span id="testPage_Odpoved_id_0">&nbsp;ODPOVED_A<span></h6>
+					    			<h6 class="w3lt-text-left" >&nbsp;<button id="testButtonAnswer_id_1" class="w3-theme-d5" type="button" >&nbsp;B&nbsp;</button><span id="testPage_Odpoved_id_1">&nbsp;ODPOVED_B<span></h6>
+		    						<h6 class="w3lt-text-left" >&nbsp;<button id="testButtonAnswer_id_2" class="w3-theme-d5" type="button" >&nbsp;C&nbsp;</button><span id="testPage_Odpoved_id_2">&nbsp;ODPOVED_C<span></h6>
+		    						<h6 class="w3lt-text-left" >&nbsp;<button id="testButtonAnswer_id_3" class="w3-theme-d5" type="button" >&nbsp;D&nbsp;</button><span id="testPage_Odpoved_id_3">&nbsp;ODPOVED_D<span></h6>
+		    							
+		    						<br>
+		    						<br>
+		    						<h6 id="endPage_study_id" class="w3lt-text-left_width"></h6>
+		  					</div>
+		  					<br>
+		  					
+		  					<!-- NASTUDUJ -->
+		  					
+		  					
+		  					
+	    					<br>
+	    			</div><!-- CONTENT 'TEST' END -->	
+	    			
+	    			<!-- CONTENT 'VYHODNOTENIE' -->	
+	    			<div id="testResultPage" class="w3-display-topmiddle w3-hide">
+	    					<br>
+	    					<br>
+	    					<br>
+		    				<div class="w3-theme-l5">
+		    						<h3 class="w3lt-text-centre">Vyhodnotenie</h3>
+		    						<h6 class="w3lt-text-centre">Skóre</h6>
+		    						<div class="w3lt-text-centre" >
+		    							<b><span id="testResultPage_good">XX</span></b>/<span id="testResultPage_all" style="font-size: 70%;">YY</span>
+		    						</div>
+		    						<br>
+		    				  	<div class="w3lt-text-centre" >
+		    							<span id="testResultPage_study">STUDIUM</span>
+		    						</div>
+		    				  	<br>
+		    				  	<br>
+		    				  	<div class="w3lt-text-centre" >
+		    				  		<button id="testButtonShowResult_ID" class="w3-theme-d5" type="button" >&nbsp;&nbsp;Zobraziť odpovede&nbsp;&nbsp;</button>
+											<button id="testButtonAgain_ID" class="w3-theme-d5" type="button" >&nbsp;&nbsp;Ďaľší test&nbsp;&nbsp;</button>
+											<br>
+											<br>
+											<br>
+											<br>
+											<img src="../../images/logo libera terra.svg" class="lt_logo" alt="Libera Terra">
+										</div>		
+		  					</div>
+		  					<br>
+	    					<br>
+	    			</div><!-- CONTENT 'VYHODNOTENIE' END -->	
+	    			
+	    			<!-- CONTENT 'ZAVER' -->	
+	    			<div id="testEndPage" class="w3-display-topmiddle w3-hide">
+	    					<br>
+	    					<br>
+	    					<br>
+		    				<div class="w3-theme-l5">
+		    				  	<div class="w3lt-text-centre" >
+		    				  		
+		    				  		<button id="testButtonAgain2_ID" class="w3-theme-d5" type="button" >&nbsp;&nbsp;Ďalší test&nbsp;&nbsp;</button>
+											<button id="testButtonEnd_ID" class="w3-theme-d5" type="button" >&nbsp;&nbsp;Koniec&nbsp;&nbsp;</button>
+											<br>
+											<br>		
+											<h6 id="endPage_Thank_id" class="w3lt-text-centre">PODAKOVANIE</h6>
+					  					<br>
+											<img src="../../images/logo_lt.jpg" class="w3-round" alt="Libera Terra">
+										</div>		
+		  					</div>
+		  					<br>
+	    					<br>
+	    			</div><!-- CONTENT 'ZAVER' END -->	
+	    			
+	    			
+	    			<!-- FOOTER -->
+						<div class="w3-bottom w3-theme-d4" style="width:100%;">
+							<div id="footerBar_ID" class="w3-container w3-padding w3-theme-d5">
+			  					<span class="w3-right">&nbsp</span>
+				 	 		</div>
+				 	 	</div> <!-- FOOTER END -->
+    	
+				</div>	<!-- PAGE END -->
+	     
+    </body>
+</html>

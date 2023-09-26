@@ -1,0 +1,459 @@
+{
+	"testCode": "zs_MAJO",
+	"testName": "S\u00fa\u010din a podiel v 5. ro\u010dn\u00edku",
+	"testThank": "V.\nTe\u0161\u00edme sa na stretnutie v inej t\u00e9me 5. ro\u010dn\u00edka.",
+	"testStudy": "Ak sa ti nedarilo pod\u013ea tvojich predst\u00e1v a potrebuje\u0161 k tejto t\u00e9me viac inform\u00e1ci\u00ed, n\u00e1jde\u0161 ich v u\u010debnici Matematika 5 na strane 12 alebo v 3. pracovnom zo\u0161ite na 5. strane.",
+	"testQuestions": [
+		{
+			"question": "Vypo\u010d\u00edtaj OPERACIA \u010d\u00edsel CISLO1 a CISLO2.",
+			"modifications": [
+				{
+					"variables": {
+						"OPERACIA": "s\u00fa\u010din",
+						"CISLO1": "9",
+						"CISLO2": "3 863"
+					},
+					"answers": [
+						"34 767",
+						"33 767",
+						"33 667",
+						"34 657"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA": "podiel",
+						"CISLO1": "12 123",
+						"CISLO2": "3"
+					},
+					"answers": [
+						"4 041",
+						"441",
+						"0 441",
+						"404"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA": "s\u00fa\u010din",
+						"CISLO1": "72",
+						"CISLO2": "54"
+					},
+					"answers": [
+						"3 888",
+						"648",
+						"758",
+						"3 688"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Vypo\u010d\u00edtaj OPERACIA \u010d\u00edsel CISLO1 a CISLO2.",
+			"modifications": [
+				{
+					"variables": {
+						"OPERACIA": ":",
+						"CISLO1": "22 167",
+						"CISLO2": "9"
+					},
+					"answers": [
+						"2 463",
+						"2 363",
+						"2 453",
+						"2 353"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA": ":",
+						"CISLO1": "22 160",
+						"CISLO2": "4"
+					},
+					"answers": [
+						"5 540",
+						"554",
+						"5 550",
+						"553"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA": ".",
+						"CISLO1": "512",
+						"CISLO2": "18"
+					},
+					"answers": [
+						"9 216",
+						"4 168",
+						"9 116",
+						"4 068"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Vypo\u010d\u00edtaj 1 000 000 OPERACIA1 CISLO1 OPERACIA2 CISLO2",
+			"modifications": [
+				{
+					"variables": {
+						"OPERACIA1": ":",
+						"OPERACIA2": ":",
+						"CISLO1": "25",
+						"CISLO2": "5"
+					},
+					"answers": [
+						"8 000",
+						"200 000",
+						"40 000",
+						"50 000"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA1": ":",
+						"OPERACIA2": ".",
+						"CISLO1": "10 000",
+						"CISLO2": "75"
+					},
+					"answers": [
+						"7 500",
+						"100",
+						"75 000",
+						"750"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA1": ".",
+						"OPERACIA2": ":",
+						"CISLO1": "2",
+						"CISLO2": "400"
+					},
+					"answers": [
+						"5 000",
+						"500",
+						"125",
+						"100"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Vyde\u013e DRUH1 DRUH2 \u010d\u00edslo \u010d\u00edslom CISLO.",
+			"modifications": [
+				{
+					"variables": {
+						"DRUH1": "najv\u00e4\u010d\u0161ie",
+						"DRUH2": "\u0161es\u0165cifern\u00e9",
+						"CISLO": "33"
+					},
+					"answers": [
+						"30 303",
+						"3 033",
+						"333",
+						"3 303"
+					]
+				},
+				{
+					"variables": {
+						"DRUH1": "najv\u00e4\u010d\u0161ie",
+						"DRUH2": "\u0161es\u0165cifern\u00e9",
+						"CISLO": "99"
+					},
+					"answers": [
+						"10 101",
+						"1 011",
+						"111",
+						"1 101"
+					]
+				},
+				{
+					"variables": {
+						"DRUH1": "najmen\u0161ie",
+						"DRUH2": "p\u00e4\u0165cifern\u00e9",
+						"CISLO": "40"
+					},
+					"answers": [
+						"250",
+						"25",
+						"2 500",
+						"205"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Vyn\u00e1sob DRUH1 DRUH2 \u010d\u00edslo \u010d\u00edslom CISLO.",
+			"modifications": [
+				{
+					"variables": {
+						"DRUH1": "najv\u00e4\u010d\u0161ie",
+						"DRUH2": "dvojcifern\u00e9",
+						"CISLO": "1 000"
+					},
+					"answers": [
+						"99 000",
+						"9 900",
+						"10 000",
+						"100 000"
+					]
+				},
+				{
+					"variables": {
+						"DRUH1": "najmen\u0161ie",
+						"DRUH2": "p\u00e4\u0165cifern\u00e9",
+						"CISLO": "39"
+					},
+					"answers": [
+						"390 000",
+						"39 000",
+						"3 899 961",
+						"899 991"
+					]
+				},
+				{
+					"variables": {
+						"DRUH1": "najv\u00e4\u010d\u0161ie",
+						"DRUH2": "trojcifern\u00e9",
+						"CISLO": "22"
+					},
+					"answers": [
+						"21 978",
+						"21 878",
+						"1 998",
+						"1 898"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Na obr\u00e1zku je \u010das\u0165 s\u00fa\u010dnovej pyram\u00eddy. Ak\u00e9 \u010d\u00edslo by malo by\u0165 spr\u00e1vne dop\u00edsan\u00e9 FARBA obd\u013a\u017eniku?",
+			"modifications": [
+				{
+					"variables": {
+						"UTVAR": "pyramida",
+						"FARBA": "\u017eltej"
+					},
+					"answers": [
+						"4",
+						"40",
+						"4 800",
+						"360"
+					]
+				},
+				{
+					"variables": {
+						"UTVAR": "pyramida",
+						"FARBA": "\u010dervenej"
+					},
+					"answers": [
+						"12",
+						"120",
+						"1 200",
+						"1 080"
+					]
+				},
+				{
+					"variables": {
+						"UTVAR": "pyramida",
+						"FARBA": "modrej"
+					},
+					"answers": [
+						"1 440",
+						"144",
+						"240",
+						"2 400"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Na obr\u00e1zku je n\u00e1sobilkov\u00fd \u0161tvorec. Ak\u00e9 \u010d\u00edslo je schovan\u00e9 pod FARBA \u0161tvorcom?\nPozn\u00e1mka: V na\u0161om n\u00e1sobilkovom \u0161tvorci je s\u00fa\u010din \u010d\u00edsla v \u013eavom rohu hore a \u010d\u00edsla v prvom hornom rohu je 6. S\u00fa\u010din \u010d\u00edsla v \u013eavom hornom rohu a \u010d\u00edsla v p\u013eavom dolnom roku je 9. A tak rovnako v spodnom rade a v pravom st\u013apci.",
+			"modifications": [
+				{
+					"variables": {
+						"FARBA": "\u010derven\u00fdm"
+					},
+					"answers": [
+						"2",
+						"3",
+						"12",
+						"1"
+					]
+				},
+				{
+					"variables": {
+						"FARBA": "modr\u00fdm"
+					},
+					"answers": [
+						"3",
+						"2",
+						"12",
+						"1"
+					]
+				},
+				{
+					"variables": {
+						"FARBA": "zelen\u00fdm"
+					},
+					"answers": [
+						"12",
+						"3",
+						"2",
+						"1"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Dopl\u0148 s\u010d\u00edtanca tak, aby platila rovnos\u0165: CISLO1 . CISLO2 . ______ = CISLO3",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "12",
+						"CISLO2": "4",
+						"CISLO3": "960"
+					},
+					"answers": [
+						"20",
+						"2",
+						"10",
+						"944"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "125",
+						"CISLO2": "2",
+						"CISLO3": "50 000"
+					},
+					"answers": [
+						"200",
+						"20",
+						"2",
+						"250"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "3",
+						"CISLO2": "21",
+						"CISLO3": "126 000"
+					},
+					"answers": [
+						"2 000",
+						"200",
+						"20",
+						"2"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "Ktor\u00e9 \u010d\u00edslo je CISLO1-kr\u00e1t OPERACIA ako \u010d\u00edslo CISLO2?",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "3",
+						"CISLO2": "512",
+						"OPERACIA": "v\u00e4\u010d\u0161ie"
+					},
+					"answers": [
+						"1 536",
+						"1 516",
+						"1 546",
+						"1 526"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "25",
+						"CISLO2": "6 500",
+						"OPERACIA": "men\u0161ie"
+					},
+					"answers": [
+						"260",
+						"250",
+						"206",
+						"205"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "19",
+						"CISLO2": "589",
+						"OPERACIA": "men\u0161ie"
+					},
+					"answers": [
+						"31",
+						"301",
+						"41",
+						"401"
+					]
+				}
+			],
+			"studium": {
+			}
+		},
+		{
+			"question": "V ktorej mo\u017enosti je spr\u00e1vne zap\u00edsan\u00fd OPERACIA1 \u010d\u00edsel 2 514 a 1 002 OPERACIA2 15-kr\u00e1t?",
+			"modifications": [
+				{
+					"variables": {
+						"OPERACIA1": "rozdiel",
+						"OPERACIA2": "zv\u00e4\u010d\u0161en\u00fd"
+					},
+					"answers": [
+						"15 . (2 514 \u2013 1 002)",
+						"15 + (2 514 \u2013 1 002)",
+						"(2 514 + 1 002) : 15",
+						"(2 514 + 1 002) - 15"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA1": "podiel",
+						"OPERACIA2": "zmen\u0161en\u00fd"
+					},
+					"answers": [
+						"(2 514 : 1 002) : 15",
+						"(2 514 \u2013 1 002) : 15",
+						"(2 514 + 1 002) - 15",
+						"(2 514 - 1 002) - 15"
+					]
+				},
+				{
+					"variables": {
+						"OPERACIA1": "s\u00fa\u010din",
+						"OPERACIA2": "zv\u00e4\u010d\u0161en\u00fd"
+					},
+					"answers": [
+						"15 .  (2 514 . 1 002)",
+						"15 . (2 514 + 1 002)",
+						"(2 514 + 1 002) + 15",
+						"(2 514 + 1 002) : 15"
+					]
+				}
+			],
+			"studium": {
+			}
+		}
+	]
+}

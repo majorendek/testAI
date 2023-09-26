@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="sk-SK">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Libera Terra - SIGNUP</title>
+       
+        <link rel="icon" href="../../images/favicon.ico">
+       
+       	<!-- CSS -->
+        <link rel="stylesheet" href="../../css/w3.css">
+        <link rel="stylesheet" href="../../css/w3-theme-liberaterra.css">
+        <link rel="stylesheet" href="../../css/font-awesome_4.7.0.min.css">
+        <link rel="stylesheet" href="../../css/w3lt.css">
+        
+        <!-- LIBS -->
+        <script src="./../../libs/sha256.js"></script>
+        <script src="./../../libs/client.min.js"></script>
+        <script src="./../../libs/jquery-3.4.1.min.js"></script>
+        
+        
+        <!-- SCRIPT MODULE -->
+        <script src="../general/general.js"></script>
+        <script src="../general/calls.js"></script>
+        <script src="./signup.js"></script>
+        
+        <!-- START -->
+        <script>
+        	$( document ).ready(function() {
+    					fncSignup_start();
+    					
+    					
+    					//show time		
+    					setInterval(function(){ 
+    						var myDateObj = new Date()
+    						var myTime = myDateObj.getHours() + ":" + myDateObj.getMinutes().toString().padStart(2, "0") + ":" + myDateObj.getSeconds().toString().padStart(2, "0");
+    						
+										document.getElementById('currentTime_ID').innerHTML = myTime;	
+    					}, 1000);
+    					
+					});
+					
+					
+					
+        </script>
+        
+        
+    </head>
+    
+    	<body class="w3-theme-l5">
+    
+    		<!-- LOADER -->
+		    <div id="generalLoader" class="loaderContainer w3-hide" style="z-index:10000;">
+				    <div class="loader" ></div>
+				</div>   
+				
+				<!-- MODAL INFO -->
+				<div id="generalModalInfo" class="w3-modal w3-animate-opacity">
+			    <div class="w3-modal-content w3-card-4 w3lt-border-red">
+			      <header class="w3-container w3-theme-d5"> 
+			        	<span onclick="fncGeneral_modalInfoHide()" class="w3-button w3-large" style="position: absolute; right: 0px;">&times;</span>
+			      </header>
+			      <div id="generalModalInfo_content" class="w3-container">
+			        
+			      </div>
+			    </div>
+			  </div>
+		    
+    
+				<!-- PAGE -->
+				<div class="w3-content" style="max-width:1200px;">
+    	
+    				<!-- HEADER -->
+		    		<div class="w3-display-topleft w3-theme-d4" style="width:100%;" >
+			  			<div id="headerBar_ID" class="w3-container w3-padding">
+			    			<div class="w3-right">
+			    				<i class="fa fa fa-user-times" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i>
+			    				<span id='currentTime_ID' ></span>
+			    			</div>
+				 	 		</div>
+				 	 	</div> <!-- HEADER END -->
+    	
+    				<div class="w3-display-topleft w3-container">
+	    				<img src="../../images/logo_web.png" class="" alt="Superschopnosti">
+	    			</div>
+    	
+    	
+    				<!-- CONTENT -->
+  					<div class="w3-display-middle">
+  						
+  						<div id="errorMessage_ID" class="w3-panel w3-orange w3-hide">
+							  <b><p style="text-align: center;"></p></b>
+							</div> 
+					 	
+							<div class="w3-bar">
+    						<button id="btnTabSignin_ID" class="w3-bar-item w3-button tablink w3-theme-d3">Prihlásenie</button>
+    						<button class="w3-bar-item tablink w3-theme-l4">Registrácia</button>
+  						</div>		 	
+					 	
+					 	
+					 		<div id="loginForm_ID" class="w3-card-2 container w3-theme-l4">
+					 
+					 				<label for="email"><b>E-mail</b></label>
+							    <input id="email_ID" tabindex="1" type="text" placeholder="Zadaj email" name="email" required autocomplete="email">
+
+							 	  <label for="username"><b>Prihlasovacie meno (nepovinné)</b></label>
+							    <input id="username_ID" tabindex="2" type="text" placeholder="Zadaj prihlasovacie meno" name="username">
+									
+							    <label for="password"><b>Heslo</b></label>
+							    <input id="password_ID" tabindex="3" type="password" placeholder="Zadaj heslo" name="password" required autocomplete="current-password">
+							    <input id="password2_ID" tabindex="4" type="password" placeholder="Zadaj znova heslo" name="password" required autocomplete="current-password">
+							        
+							    <button id="btnSubmitLogin_ID" tabindex="5" class="w3-theme-d3" type="submit">Zaregistruj ma</button>
+							 
+							 
+							</div>
+					 
+						</div> <!-- CONTENT END -->
+					
+						<!-- FOOTER -->
+						<div class="w3-display-bottomleft w3-theme-d4" style="width:100%;">
+			  			<div id="footerBar_ID" class="w3-container w3-padding w3-theme-d5">
+			  					<span class="w3-right">&nbsp</span>
+				 	 		</div>
+				 	 	</div> <!-- FOOTER END -->
+    	
+						
+			</div>	<!-- PAGE END -->
+			
+
+       
+    </body>
+</html>

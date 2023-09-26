@@ -1,0 +1,120 @@
+/*
+company: Forward Thinking s.r.o.
+devloper: Marian Rendek
+date: 7.11.2019
+
+css
+*/
+
+
+/* =====================  GENERAL PART ===========================*/
+html * {
+   font-family: Helvetica, Arial;
+}
+
+/* Change styles for span on extra small screens */
+@media screen and (max-width: 300px) {
+  span.password {
+     display: block;
+     float: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="w3-display-"] {
+    width: 90%;
+  }
+  
+}
+
+.w3lt-label { 
+	margin: 0 0 0 0 !important;
+	padding: 0 0 0 0 !important;
+	vertical-align: top !important;
+	white-space: nowrap !important;
+	}
+
+
+.w3lt-input { 
+	margin: 0 0 0 0 !important;
+	padding: 0px 0px 0px 5px !important;
+	font-weight: bold !important; 
+	vertical-align: top !important;
+	}
+	
+.w3lt-border-red {
+    border-style:solid;
+    border-width:2px;  
+    border-color:red;
+}
+
+.w3lt-tab-button-frame {
+		border-right: 5px solid #f1f6fa !important;
+}
+
+.w3lt-text-centre {
+		text-align: center;
+}
+
+.w3lt-text-left {
+		text-align: left;
+}
+
+.w3lt-text-left_width {
+		text-align: left;
+		max-width: 500px;
+}
+
+.w3lt-text-right {
+		text-align: right;
+}
+
+.lt_logo {
+	max-width: 150px;	
+}
+
+/* =====================  W3CSS MODIFICATION  ===========================*/
+.w3lt-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
+.w3lt-display-bottomleft{position:absolute;left:0;bottom:0}.w3-display-bottomright{position:absolute;right:0;bottom:0}
+.w3lt-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.w3lt-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3lt-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3lt-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3lt-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3lt-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+.w3lt-display-position{position:absolute}
+
+
+/* =====================  LOADER ===========================*/
+
+.loaderContainer{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%)
+}
+
+.loader {	
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid #aaaaaa;
+  border-bottom: 16px solid #aaaaaa;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+

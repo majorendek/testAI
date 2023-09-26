@@ -1,0 +1,1312 @@
+{
+	"testCode": "zs_6_SM",
+	"testName": "\u0160iestack\u00e9 minimum",
+	"testThank": "Ver\u00edme, \u017ee ti opakovanie pomocou n\u00e1\u0161ho testu pomohlo e\u0161te viac zopakova\u0165 a upevni\u0165 tvoje matematick\u00e9 vedomosti 6. ro\u010dn\u00edka.\r\nTe\u0161\u00edme sa na stretnutie v Siedmackom minime.",
+	"testQuestions": [
+		{
+			"question": "Najmen\u0161\u00ed spolo\u010dn\u00fd n\u00e1sobok \u010d\u00edsel CISLO1 a CISLO2 je",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "12",
+						"CISLO2": "18"
+					},
+					"answers": [
+						"36",
+						"18",
+						"2",
+						"12"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "16",
+						"CISLO2": "18"
+					},
+					"answers": [
+						"144",
+						"16",
+						"18",
+						"2"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "16",
+						"CISLO2": "12"
+					},
+					"answers": [
+						"48",
+						"2",
+						"4",
+						"16"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "6",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Najv\u00e4\u010d\u0161\u00ed spolo\u010dn\u00fd delite\u013e \u010d\u00edsel CISLO1 a CISLO2 je \u010d\u00edslo",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "12",
+						"CISLO2": "18"
+					},
+					"answers": [
+						"6",
+						"18",
+						"36",
+						"12"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "16",
+						"CISLO2": "18"
+					},
+					"answers": [
+						"2",
+						"1",
+						"18",
+						"16"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "16",
+						"CISLO2": "12"
+					},
+					"answers": [
+						"4",
+						"2",
+						"12",
+						"16"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "6",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Najmen\u0161ie DEFINICIA je",
+			"modifications": [
+				{
+					"variables": {
+						"DEFINICIA": "nep\u00e1rne prvo\u010d\u00edslo"
+					},
+					"answers": [
+						"3",
+						"2",
+						"1",
+						"0"
+					]
+				},
+				{
+					"variables": {
+						"DEFINICIA": "dvojcifern\u00e9 prvo\u010d\u00edslo"
+					},
+					"answers": [
+						"11",
+						"10",
+						"13",
+						"17"
+					]
+				},
+				{
+					"variables": {
+						"DEFINICIA": "jednocifern\u00e9 prvo\u010d\u00edslo"
+					},
+					"answers": [
+						"2",
+						"1",
+						"0",
+						"3"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "4",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "\u010c\u00edslo je delite\u013en\u00e9 DEFINICIA, ak",
+			"modifications": [
+				{
+					"variables": {
+						"DEFINICIA": "\u0161tyrmi"
+					},
+					"answers": [
+						"je jeho posledn\u00e9 dvoj\u010d\u00edslie delite\u013en\u00e9 4.",
+						"je cifra na mieste jednotiek 4.",
+						"je s\u00fa\u010det posledn\u00fdch dvoch cifier \u010d\u00edsla delite\u013en\u00fd 4.",
+						"je cifern\u00fd s\u00fa\u010det \u010d\u00edsla delite\u013en\u00fd 4."
+					]
+				},
+				{
+					"variables": {
+						"DEFINICIA": "piatimi"
+					},
+					"answers": [
+						"je cifra na mieste jednotiek 5 alebo 0.",
+						"je jeho posledn\u00e9 dvoj\u010d\u00edslie delite\u013en\u00e9 5.",
+						"je s\u00fa\u010det posledn\u00fdch dvoch cifier \u010d\u00edsla delite\u013en\u00fd 5.",
+						"je cifern\u00fd s\u00fa\u010det \u010d\u00edsla delite\u013en\u00fd 5 alebo 0."
+					]
+				},
+				{
+					"variables": {
+						"DEFINICIA": "tromi"
+					},
+					"answers": [
+						"je cifern\u00fd s\u00fa\u010det \u010d\u00edsla delite\u013en\u00fd 3.",
+						"je cifra na mieste jednotiek 3.",
+						"je s\u00fa\u010det posledn\u00fdch dvoch cifier \u010d\u00edsla delite\u013en\u00fd 3.",
+						"je jeho posledn\u00e9 dvoj\u010d\u00edslie delite\u013en\u00e9 3."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "3 a 4",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "\u010c\u00edslo je delite\u013en\u00e9 DEFINICIA, ak",
+			"modifications": [
+				{
+					"variables": {
+						"DEFINICIA": "deviatimi"
+					},
+					"answers": [
+						"je jeho cifern\u00fd s\u00fa\u010det delite\u013en\u00fd deviatimi.",
+						"je s\u00fa\u010det cifier \u010d\u00edsla delite\u013en\u00fd tromi.",
+						"je \u010d\u00edslo nep\u00e1rne a v\u00e4\u010d\u0161ie ako dev\u00e4\u0165.",
+						"je s\u00fa\u010din cifier \u010d\u00edsla delite\u013en\u00fd deviatimi."
+					]
+				},
+				{
+					"variables": {
+						"DEFINICIA": "\u00f4smimi"
+					},
+					"answers": [
+						"je jeho posledn\u00e9 troj\u010d\u00edslie delite\u013en\u00e9 8.",
+						"je posledn\u00e9 dvoj\u010d\u00edslie \u010d\u00edsla delite\u013en\u00e9 \u0161tyrmi.",
+						"je \u010d\u00edslo p\u00e1rne a v\u00e4\u010d\u0161ie ako osem.",
+						"je cifern\u00fd s\u00fa\u010din \u010d\u00edsla delite\u013en\u00fd 8."
+					]
+				},
+				{
+					"variables": {
+						"DEFINICIA": "\u0161iestimi"
+					},
+					"answers": [
+						"je \u010d\u00edslo s\u00fa\u010dasne delite\u013en\u00e9 tromi aj dvomi.",
+						"je jeho posledn\u00e9 dvoj\u010d\u00edslie delite\u013en\u00e9 \u0161iestimi.",
+						"je \u010d\u00edslo p\u00e1rne a v\u00e4\u010d\u0161ie ako dvan\u00e1s\u0165.",
+						"je s\u00fa\u010din cifier \u010d\u00edsla delite\u013en\u00fd \u0161iestimi."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "3 a 4",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "V ktorej mo\u017enosti je spr\u00e1vny rozklad desatinn\u00e9ho \u010d\u00edsla CISLO v desiatkovej s\u00fastave?",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO": "70,08"
+					},
+					"answers": [
+						"70,08 = 7 \uff65 10 + 8 \uff65 0,01",
+						"70,08 = 70 \uff65 1 + 8 \uff65 0,1",
+						"70,08 = 70 \uff65 0 + 8 \uff65 0,1",
+						"70,08 = 7 \uff65 1 + 8 \uff65 0,01"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "80,07"
+					},
+					"answers": [
+						"80,07 = 8 \uff65 10 + 7 \uff65 0,01",
+						"80,07 = 80 \uff65 1 + 7 \uff65 0,1",
+						"80,07 = 80 \uff65 0 + 7 \uff65 0,1",
+						"80,07 = 8 \uff65 1 + 7 \uff65 0,01"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "7,008"
+					},
+					"answers": [
+						"7,008 = 7 \uff65 1 + 8 \uff65 0,001",
+						"7,008 = 7 \uff65 1 + 8 \uff65 0,01",
+						"7,008 = 7 \uff65 0 + 8 \uff65 0,001",
+						"7,008 = 78 \uff65 1,001"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "7",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Na obr\u00e1zku je nakreslen\u00fd obd\u013a\u017enik ABCD rozdelen\u00fd uhloprie\u010dkami, ktor\u00e9 sa pret\u00ednaj\u00fa v bode S. V ktorej mo\u017enosti je zap\u00edsan\u00fd NAZOV uhol k uhlu UHOL.  <br><br><img src='..\/..\/test_definitions\/zs_6_SM\/IMAGE' style='max-height:150px;'>",
+			"modifications": [
+				{
+					"variables": {
+						"IMAGE": "obdlznik.svg",
+						"NAZOV": "susedn\u00fd",
+						"UHOL": "ASB"
+					},
+					"answers": [
+						"\u2222 DSA",
+						"\u2222 DSC",
+						"\u2222 DCS",
+						"\u2222 SAB"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "obdlznik.svg",
+						"NAZOV": "vrcholov\u00fd",
+						"UHOL": "BSC"
+					},
+					"answers": [
+						"\u2222 DSA",
+						"\u2222 DSC",
+						"\u2222 SCD",
+						"\u2222 SAB"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "obdlznik.svg",
+						"NAZOV": "susedn\u00fd",
+						"UHOL": "CSD"
+					},
+					"answers": [
+						"\u2222 DSA",
+						"\u2222 ASB",
+						"\u2222 SCD",
+						"\u2222 SAB"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "25",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "V ktorej mo\u017enosti je nap\u00edsan\u00e1 spr\u00e1vne peri\u00f3da desatinn\u00e9ho \u010d\u00edsla, ktor\u00e9 dostaneme, ke\u010f vydel\u00edme \u010d\u00edslo CISLO1 \u010d\u00edslom CISLO2?",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "2",
+						"CISLO2": "7"
+					},
+					"answers": [
+						"285714",
+						"0,285714",
+						"2857",
+						"0,2857"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "50",
+						"CISLO2": "7"
+					},
+					"answers": [
+						"142857",
+						"7,14285",
+						"0,142857",
+						"0,7142"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "10",
+						"CISLO2": "7"
+					},
+					"answers": [
+						"428571",
+						"1,428571",
+						"0,428571",
+						"1,42857"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "17",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Spr\u00e1vne zap\u00edsan\u00fd \u010d\u00edseln\u00fd v\u00fdraz CISLO je:",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO": "trin\u00e1s\u0165 cel\u00fdch \u0161tyri stotiny plus jedna cel\u00e1 p\u00e4\u0165 stot\u00edn"
+					},
+					"answers": [
+						"13,04 + 1,05",
+						"13,04 + 1,5",
+						"3,4 + 1,05",
+						"13,04 + 15"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "trin\u00e1s\u0165 cel\u00fdch \u0161tyri desatiny plus jedna cel\u00e1 p\u00e4\u0165 stot\u00edn"
+					},
+					"answers": [
+						"13,4 + 1,05",
+						"13,04 + 1,5",
+						"3,4 + 1,05",
+						"13,04 + 50"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "trin\u00e1s\u0165 cel\u00fdch \u0161tyri stotiny plus jedna cel\u00e1 p\u00e4\u0165 tis\u00edcin"
+					},
+					"answers": [
+						"13,04 + 1,005",
+						"13,4 + 1,05",
+						"13,4 + 1,005",
+						"13,04 + 150"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "7",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Ktor\u00e9 z \u010d\u00edsel bude najv\u00e4\u010d\u0161ie po zaokr\u00fahlen\u00ed na RAD?",
+			"modifications": [
+				{
+					"variables": {
+						"RAD": "jednotky"
+					},
+					"answers": [
+						"33,709",
+						"32,54",
+						"33,40",
+						"32,075"
+					]
+				},
+				{
+					"variables": {
+						"RAD": "desiatky"
+					},
+					"answers": [
+						"35,709",
+						"32,54",
+						"33,40",
+						"34,075"
+					]
+				},
+				{
+					"variables": {
+						"RAD": "desatiny"
+					},
+					"answers": [
+						"33,709",
+						"32,58",
+						"33,40",
+						"32,075"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "9",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Star\u00e1 mama kupovala v tr\u017enici 1,5 kg zemiakov, 0,8 kg paradajok, 0,5 kg mrkvy a 0,5 kg petr\u017elenu. Mohla star\u00e1 mama odnies\u0165 svoj n\u00e1kup v dvoch ta\u0161k\u00e1ch, z ktor\u00fdch ka\u017ed\u00e1 mala nosnos\u0165 CISLO kg?",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO": "2"
+					},
+					"answers": [
+						"\u00c1no, e\u0161te by mohla doplni\u0165 tovar o hmotnosti 700 g.",
+						"\u00c1no, e\u0161te by mohla doplni\u0165 tovar o hmotnosti 70 g.",
+						"Nie, n\u00e1kup je \u0165a\u017e\u0161\u00ed o 700 g.",
+						"Nie, n\u00e1kup je \u0165a\u017e\u0161\u00ed o 70 g."
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "1,5"
+					},
+					"answers": [
+						"Nie, n\u00e1kup je \u0165a\u017e\u0161\u00ed o 300 g.",
+						"\u00c1no, e\u0161te by mohla doplni\u0165 tovar o hmotnosti 30 g.",
+						"Nie, n\u00e1kup je \u0165a\u017e\u0161\u00ed o 30 g.",
+						"\u00c1no, e\u0161te by mohla doplni\u0165 tovar o hmotnosti 300 g."
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "3"
+					},
+					"answers": [
+						"\u00c1no.",
+						"\u00c1no, sta\u010dila by jej aj jedna ta\u0161ka.",
+						"Nie, n\u00e1kup je \u0165a\u017e\u0161\u00ed o 300 g.",
+						"Nie, n\u00e1kup je \u0165a\u017e\u0161\u00ed o 30 g."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "11",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "CISLO kg je",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO": "6,5"
+					},
+					"answers": [
+						"650 dag.",
+						"650 g.",
+						"0,65 t.",
+						"0,65 q."
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "650"
+					},
+					"answers": [
+						"0,65 t.",
+						"650 g.",
+						"650 dag.",
+						"0,65 q."
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "65"
+					},
+					"answers": [
+						"0,65 q.",
+						"650 g.",
+						"650 dag.",
+						"0,65 t."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "13",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Ozna\u010d spr\u00e1vny v\u00fdsledok pr\u00edkladu DEFINITION",
+			"modifications": [
+				{
+					"variables": {
+						"DEFINITION": "1,5 \uff65 (19 \u2013 9,5) : 10 ="
+					},
+					"answers": [
+						"1,425",
+						"14,25",
+						"27,55",
+						"1,9"
+					]
+				},
+				{
+					"variables": {
+						"DEFINITION": "1,5 \uff65 19 \u2013 9,5 : 10 ="
+					},
+					"answers": [
+						"27,55",
+						"1,9",
+						"1,525",
+						"0,950"
+					]
+				},
+				{
+					"variables": {
+						"DEFINITION": "1,5 \uff65 9 \u2013 9,5 : 10 ="
+					},
+					"answers": [
+						"12,55",
+						"0,4",
+						"0,075",
+						"8,15"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "16",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Martin ka\u017ed\u00fd podve\u010der behal na \u0161kolskom ihrisku 2 000 m. Do kalend\u00e1ra si zapisoval \u010dasy v sekund\u00e1ch, za ktor\u00e9 trasu prebehol. Vypo\u010d\u00edtaj priemern\u00fd \u010das, ktor\u00fd dosiahol v tomto t\u00fd\u017edni. V ktorej mo\u017enosti je spr\u00e1vne zap\u00edsan\u00fd v\u00fdsledok zaokr\u00fahlen\u00fd na CISLO? <br><br><img src='..\/..\/test_definitions\/zs_6_SM\/IMAGE' style='max-height:150px;'>",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO": "desatiny",
+						"IMAGE": "kalendar.svg"
+					},
+					"answers": [
+						"8,4",
+						"8,3",
+						"8,39",
+						"8,38"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "stotiny",
+						"IMAGE": "kalendar.svg"
+					},
+					"answers": [
+						"8,39",
+						"8,3",
+						"8,4",
+						"8,38"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "tis\u00edciny",
+						"IMAGE": "kalendar.svg"
+					},
+					"answers": [
+						"8,386",
+						"8,387",
+						"8,385",
+						"8,39"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "17",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "DEDINICIA nie je",
+			"modifications": [
+				{
+					"variables": {
+						"DEDINICIA": "0,25 km"
+					},
+					"answers": [
+						"25 m.",
+						"2 500 dm.",
+						"250 000 mm.",
+						"\u0161tvr\u0165 kilometra."
+					]
+				},
+				{
+					"variables": {
+						"DEDINICIA": "0,125 km"
+					},
+					"answers": [
+						"12,5 m.",
+						"1 250 dm.",
+						"125 000 mm.",
+						"osmina kilometra."
+					]
+				},
+				{
+					"variables": {
+						"DEDINICIA": "1,5 km"
+					},
+					"answers": [
+						"150 dm.",
+						"1 500 m.",
+						"1 500 000 mm.",
+						"jeden a pol kilometra."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "13",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "D\u013a\u017eka strany \u0161tvorca, ktor\u00e9ho obvod m\u00e1 ve\u013ekos\u0165 OBVOD, je",
+			"modifications": [
+				{
+					"variables": {
+						"OBVOD": "14 m"
+					},
+					"answers": [
+						"3 500 mm.",
+						"35 cm.",
+						"3,5 dm.",
+						"350 dm."
+					]
+				},
+				{
+					"variables": {
+						"OBVOD": "41 m"
+					},
+					"answers": [
+						"1 025 cm.",
+						"102 500 mm.",
+						"10,25 dm.",
+						"1,25 m."
+					]
+				},
+				{
+					"variables": {
+						"OBVOD": "2,5 m"
+					},
+					"answers": [
+						"0,625 m.",
+						"625 cm.",
+						"6 250 dm.",
+						"6,25 mm."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "13, 15 a 16",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Vypo\u010d\u00edtaj d\u013a\u017eku oplotenia pozemku na obr\u00e1zku. <br><br><img src='..\/..\/test_definitions\/zs_6_SM\/IMAGE' style='max-height:150px;'>",
+			"modifications": [
+				{
+					"variables": {
+						"IMAGE": "pozemok1.svg"
+					},
+					"answers": [
+						"50,6 m",
+						"25,3 m",
+						"48,9 m",
+						"\u00dadaje na obr\u00e1zku nesta\u010dia pre v\u00fdpo\u010det."
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "pozemok2.svg"
+					},
+					"answers": [
+						"49,6 m",
+						"24,8 m",
+						"48,9 m",
+						"\u00dadaje na obr\u00e1zku nesta\u010dia pre v\u00fdpo\u010det."
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "pozemok3.svg"
+					},
+					"answers": [
+						"49 m",
+						"24,5 m",
+						"48,10 m",
+						"\u00dadaje na obr\u00e1zku nesta\u010dia pre v\u00fdpo\u010det."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "17",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Ak\u00fd je obsah obd\u013a\u017enika so \u0161\u00edrkou CISLO m a d\u013a\u017ekou dvakr\u00e1t v\u00e4\u010d\u0161ou ako je \u0161\u00edrka?",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO": "1,5"
+					},
+					"answers": [
+						"4,5 m\u00b2",
+						"2,25 m\u00b2",
+						"9 m\u00b2",
+						"6 m\u00b2"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "0,75"
+					},
+					"answers": [
+						"1,125 m\u00b2",
+						"1,5 m\u00b2",
+						"3 m\u00b2",
+						"6 m\u00b2"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "0,5"
+					},
+					"answers": [
+						"50 dm\u00b2",
+						"2 dm\u00b2",
+						"5 dm\u00b2",
+						"0,5 dm\u00b2"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "19",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Vypo\u010d\u00edtaj obsah \u0161tvorca s d\u013a\u017ekou strany CISLO cm a v\u00fdsledok zap\u00ed\u0161 v JEDNOTKY \u0161tvorcov\u00fdch.",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO": "56",
+						"JEDNOTKY": "decimetroch"
+					},
+					"answers": [
+						"31,36",
+						"313,6",
+						"3 136",
+						"31 360"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "56",
+						"JEDNOTKY": "metroch"
+					},
+					"answers": [
+						"0,313 6",
+						"313,6",
+						"31,36",
+						"31 360"
+					]
+				},
+				{
+					"variables": {
+						"CISLO": "65",
+						"JEDNOTKY": "milimetroch"
+					},
+					"answers": [
+						"422 500",
+						"4 225",
+						"422,5",
+						"42,25"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "18 a 19",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "ULOHA",
+			"modifications": [
+				{
+					"variables": {
+						"ULOHA": "Ko\u013ek\u00fdmi sp\u00f4sobmi m\u00f4\u017eeme do poli\u010dky ulo\u017ei\u0165 diela J. C. Hronsk\u00e9ho: Tri kozliatka, Smel\u00fd zajko, Smel\u00fd zajko v Afrike, Budk\u00e1\u010dik a Dubk\u00e1\u010dik, ak pr\u00edbehy o smelom zajkovi musia by\u0165 zaraden\u00e9 v porad\u00ed Smel\u00fd zajko, Smel\u00fd zajko v Afrike?"
+					},
+					"answers": [
+						"6",
+						"8",
+						"10",
+						"12"
+					]
+				},
+				{
+					"variables": {
+						"ULOHA": "Ko\u013ek\u00fdmi sp\u00f4sobmi m\u00f4\u017eeme do poli\u010dky ulo\u017ei\u0165 diela J. C. Hronsk\u00e9ho: Tri kozliatka, Smel\u00fd zajko, Smel\u00fd zajko v Afrike, Budk\u00e1\u010dik a Dubk\u00e1\u010dik?"
+					},
+					"answers": [
+						"24",
+						"8",
+						"16",
+						"12"
+					]
+				},
+				{
+					"variables": {
+						"ULOHA": "Ko\u013ek\u00fdmi sp\u00f4sobmi m\u00f4\u017eeme do poli\u010dky ulo\u017ei\u0165 diela J. C. Hronsk\u00e9ho: Tri kozliatka, Smel\u00fd zajko, Smel\u00fd zajko v Afrike, Budk\u00e1\u010dik a Dubk\u00e1\u010dik, ak kni\u017eka Budk\u00e1\u010dik a Dubk\u00e1\u010dik je u\u017e v poli\u010dke ulo\u017een\u00e1 hne\u010f na kraji?"
+					},
+					"answers": [
+						"6",
+						"8",
+						"16",
+						"12"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "32",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "M\u00e1me tri karti\u010dky s \u010d\u00edslami: CISLO1, CISLO2, CISLO3. V ktorej mo\u017enosti s\u00fa zap\u00edsan\u00e9 v\u0161etky p\u00e1rne trojcifern\u00e9 \u010d\u00edsla, ktor\u00e9 vieme z karti\u010diek vytvori\u0165?",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "2",
+						"CISLO2": "2",
+						"CISLO3": "4"
+					},
+					"answers": [
+						"224, 242, 422",
+						"244, 422, 242",
+						"244, 424, 442",
+						"224, 244, 424"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "2",
+						"CISLO2": "3",
+						"CISLO3": "4"
+					},
+					"answers": [
+						"234, 342, 324, 432",
+						"234, 423, 432, 342",
+						"243, 424, 442, 224",
+						"224, 234, 424, 442"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "2",
+						"CISLO2": "3",
+						"CISLO3": "6"
+					},
+					"answers": [
+						"236, 362, 326, 632",
+						"236, 263, 326, 362",
+						"236, 363, 326, 632",
+						"666, 332, 326, 632"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "32",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Trojuholn\u00edk ABC s vn\u00fatorn\u00fdmi uhlami ve\u013ekosti \u03b1 = UHOL1, \u03b2 = UHOL2, \u03b3 = UHOL3 naz\u00fdvame",
+			"modifications": [
+				{
+					"variables": {
+						"UHOL1": "55\u00b0",
+						"UHOL2": "60\u00b0",
+						"UHOL3": "65\u00b0"
+					},
+					"answers": [
+						"ostrouhl\u00fd r\u00f4znostrann\u00fd.",
+						"tupouhl\u00fd r\u00f4znostrann\u00fd.",
+						"ostrouhl\u00fd rovnoramenn\u00fd.",
+						"tupouhl\u00fd rovnoramenn\u00fd."
+					]
+				},
+				{
+					"variables": {
+						"UHOL1": "65\u00b0",
+						"UHOL2": "50\u00b0",
+						"UHOL3": "65\u00b0"
+					},
+					"answers": [
+						"ostrouhl\u00fd rovnoramenn\u00fd.",
+						"tupouhl\u00fd r\u00f4znostrann\u00fd.",
+						"ostrouhl\u00fd r\u00f4znostrann\u00fd.",
+						"tupouhl\u00fd rovnoramenn\u00fd."
+					]
+				},
+				{
+					"variables": {
+						"UHOL1": "24\u00b0",
+						"UHOL2": "24\u00b0",
+						"UHOL3": "132\u00b0"
+					},
+					"answers": [
+						"tupouhl\u00fd rovnoramenn\u00fd.",
+						"tupouhl\u00fd r\u00f4znostrann\u00fd.",
+						"ostrouhl\u00fd r\u00f4znostrann\u00fd.",
+						"ostrouhl\u00fd rovnoramenn\u00fd."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "27",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Ak UHOL uhol rozdel\u00edme osou, dostaneme",
+			"modifications": [
+				{
+					"variables": {
+						"UHOL": "priamy"
+					},
+					"answers": [
+						"dva prav\u00e9 uhly.",
+						"dva rovnak\u00e9 ostr\u00e9 uhly.",
+						"dva rovnak\u00e9 tup\u00e9 uhly.",
+						"dva ostr\u00e9 uhly."
+					]
+				},
+				{
+					"variables": {
+						"UHOL": "prav\u00fd"
+					},
+					"answers": [
+						"dva rovnak\u00e9 ostr\u00e9 uhly.",
+						"dva priame uhly.",
+						"dva rovnak\u00e9 tup\u00e9 uhly.",
+						"dva r\u00f4zne ostr\u00e9 uhly."
+					]
+				},
+				{
+					"variables": {
+						"UHOL": "tup\u00fd"
+					},
+					"answers": [
+						"dva rovnak\u00e9 ostr\u00e9 uhly.",
+						"dva priame uhly.",
+						"dva rovnak\u00e9 tup\u00e9 uhly.",
+						"dva r\u00f4zne ostr\u00e9 uhly."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "24",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Ak v pravouhlom trojuholn\u00edku ABC s prav\u00fdm uhlom pri vrchole A m\u00e1 vn\u00fatorn\u00fd uhol pri vrchole B ve\u013ekos\u0165 UHOL\u00b0, potom vn\u00fatorn\u00fd uhol pri vrchole C m\u00e1 ve\u013ekos\u0165",
+			"modifications": [
+				{
+					"variables": {
+						"UHOL": "28"
+					},
+					"answers": [
+						"62\u00b0",
+						"72\u00b0",
+						"152\u00b0",
+						"162\u00b0"
+					]
+				},
+				{
+					"variables": {
+						"UHOL": "63"
+					},
+					"answers": [
+						"27\u00b0",
+						"37\u00b0",
+						"117\u00b0",
+						"127\u00b0"
+					]
+				},
+				{
+					"variables": {
+						"UHOL": "45,5"
+					},
+					"answers": [
+						"44,5\u00b0",
+						"45,5\u00b0",
+						"54,5\u00b0",
+						"55,5\u00b0"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "27",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Ktor\u00fd z trojuholn\u00edkov nem\u00f4\u017eeme narysova\u0165?",
+			"modifications": [
+				{
+					"variables": {
+					},
+					"answers": [
+						"Trojuholn\u00edk ABC: a = 5,3 cm, b = 1,2 dm, c = 6,7 cm.",
+						"Trojuholn\u00edk KLM: k = l = 5,3 cm, m = 6,7 cm.",
+						"Trojuholn\u00edk EFG: e = f = 5,3 cm, uhol EGF m\u00e1 ve\u013ekos\u0165 55\u00b0.",
+						"Trojuholn\u00edk XYZ: ve\u013ekos\u0165 uhlov ZXY a ZYX je 40\u00b0, z = 5,3 cm."
+					]
+				},
+				{
+					"variables": {
+					},
+					"answers": [
+						"Trojuholn\u00edk EFG: e = f = 5,3 cm, uhol EGF m\u00e1 ve\u013ekos\u0165 200\u00b0.",
+						"Trojuholn\u00edk KLM: k = l = 5,3 cm, m = 6,7 cm.",
+						"Trojuholn\u00edk ABC: a = 53 cm, b = 1,2 dm, c = 46 cm.",
+						"Trojuholn\u00edk XYZ: ve\u013ekos\u0165 uhlov ZXY a ZYX je 40\u00b0, z = 5,3 cm."
+					]
+				},
+				{
+					"variables": {
+					},
+					"answers": [
+						"Trojuholn\u00edk XYZ: ve\u013ekos\u0165 uhlov ZXY a ZYX je 90\u00b0, z = 5,3 cm.",
+						"Trojuholn\u00edk KLM: k = l = 5,3 cm, m = 6,7 cm.",
+						"Trojuholn\u00edk ABC: a = 53 cm, b = 1,2 dm, c = 46 cm.",
+						"Trojuholn\u00edk EFG: e = f = 5,3 cm, uhol EGF m\u00e1 ve\u013ekos\u0165 120\u00b0."
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "29",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Vypo\u010d\u00edtaj obsah zelen\u00e9ho \u0161tvorca nakreslen\u00e9ho v \u0161tvorcovej sieti. <br><br><img src='..\/..\/test_definitions\/zs_6_SM\/IMAGE' style='max-height:150px;'>",
+			"modifications": [
+				{
+					"variables": {
+						"IMAGE": "stvorce1.svg"
+					},
+					"answers": [
+						"72 cm\u00b2",
+						"108 cm\u00b2",
+						"18 cm\u00b2",
+						"162 cm\u00b2"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "stvorce2.svg"
+					},
+					"answers": [
+						"162 cm\u00b2",
+						"108 cm\u00b2",
+						"18 cm\u00b2",
+						"72 cm\u00b2"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "stvorce3.svg"
+					},
+					"answers": [
+						"108 cm\u00b2",
+						"162 cm\u00b2",
+						"18 cm\u00b2",
+						"72 cm\u00b2"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "19",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Na obr\u00e1zku je nakreslen\u00fd obd\u013a\u017enik ABCD rozdelen\u00fd uhloprie\u010dkami na trojuholn\u00edky. Vypo\u010d\u00edtaj obsah trojuholn\u00edka NAZOV v decimetroch \u0161tvorcov\u00fdch.  <br><br><img src='..\/..\/test_definitions\/zs_6_SM\/IMAGE' style='max-height:150px;'>",
+			"modifications": [
+				{
+					"variables": {
+						"IMAGE": "obdlznik2.svg",
+						"NAZOV": "ABC"
+					},
+					"answers": [
+						"0,54",
+						"1,08",
+						"0,12",
+						"1,44"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "obdlznik2.svg",
+						"NAZOV": "BCD"
+					},
+					"answers": [
+						"0,54",
+						"1,08",
+						"0,12",
+						"1,44"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "obdlznik2.svg",
+						"NAZOV": "CDA"
+					},
+					"answers": [
+						"0,54",
+						"1,08",
+						"0,12",
+						"1,44"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "28",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Na obr\u00e1zku je nakreslen\u00fd r\u00f4znostrann\u00fd trojuholn\u00edk ABC a v \u0148om v\u00fd\u0161ka na stranu b. V ktorej mo\u017enosti s\u00fa spr\u00e1vne porovnan\u00e9 d\u013a\u017eky \u00fase\u010diek? <br><br><img src='..\/..\/test_definitions\/zs_6_SM\/IMAGE' style='max-height:150px;'>",
+			"modifications": [
+				{
+					"variables": {
+						"IMAGE": "trojuholnik2.svg"
+					},
+					"answers": [
+						"|BB\u2081| < |AB|",
+						"|BB\u2081| > |AB|",
+						"|BB\u2081| > |CB|",
+						"|BB\u2081| > |CA|"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "trojuholnik2.svg"
+					},
+					"answers": [
+						"|BB\u2081| < |CB|",
+						"|BB\u2081| > |AB|",
+						"|BB\u2081| > |CB|",
+						"|BB\u2081| > |CA|"
+					]
+				},
+				{
+					"variables": {
+						"IMAGE": "trojuholnik2.svg"
+					},
+					"answers": [
+						"|BB\u2081| < |AB| < |CB|",
+						"|BB\u2081| < |CB| < |AB|",
+						"|BB\u2081| > |AB| > |CB|",
+						"|BB\u2081| > |CB| > |AB|"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "28",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "V ktorej mo\u017enosti s\u00fa \u010d\u00edsla CISLO1; CISLO2; CISLO3; CISLO4 usporiadan\u00e9 spr\u00e1vne?",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "1",
+						"CISLO2": "0,65",
+						"CISLO3": "1,3",
+						"CISLO4": "0,56"
+					},
+					"answers": [
+						"1,3 > 1 > 0,65 > 0,56",
+						"1,3 > 1 > 0,56 > 0,65",
+						"0,65 < 0,56 < 1,3 < 1",
+						"0,65 < 0,56 < 1 < 1,3"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "2,01",
+						"CISLO2": "2,1",
+						"CISLO3": "2,11",
+						"CISLO4": "1,21"
+					},
+					"answers": [
+						"1,21 < 2,01 < 2,1 < 2,11",
+						"1,21 < 2,1 < 2,01 < 2,11",
+						"1,21 > 2,1 > 2,01 > 2,11",
+						"1,21 > 2,01 > 2,1 > 2,11"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "1,05",
+						"CISLO2": "0,55",
+						"CISLO3": "0,5",
+						"CISLO4": "0,05"
+					},
+					"answers": [
+						"0,05 < 0,5 < 0,55 < 1,05",
+						"0,05 < 0,55 < 0,5 < 1,05",
+						"0,05 > 0,5 > 0,55 > 1,05",
+						"0,05 > 0,55 > 0,5 > 1,05"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "29",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		},
+		{
+			"question": "Podiel \u010d\u00edsel CISLO1 a CISLO2 je",
+			"modifications": [
+				{
+					"variables": {
+						"CISLO1": "1,8",
+						"CISLO2": "12"
+					},
+					"answers": [
+						"0,15",
+						"0,015",
+						"1,5",
+						"15"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "1,2",
+						"CISLO2": "0,8"
+					},
+					"answers": [
+						"1,5",
+						"0,15",
+						"0,015",
+						"15"
+					]
+				},
+				{
+					"variables": {
+						"CISLO1": "12",
+						"CISLO2": "0,8"
+					},
+					"answers": [
+						"15",
+						"1,5",
+						"0,15",
+						"0,015"
+					]
+				}
+			],
+			"studium": {
+				"STRANA": "15",
+				"MENO": "pracovnom zo\u0161ite \u0160iestack\u00e9 minimum"
+			}
+		}
+	]
+}

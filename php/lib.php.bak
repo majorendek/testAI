@@ -1,0 +1,426 @@
+<?php
+
+
+//////////////// DEFINITIONS /////////////////////////////////
+
+require("class.phpmailer.php");
+require("config.php");
+
+
+
+////////////////   VARIABLES //////////////////////////////
+$errorStatus = true;
+$errorCode = 0;
+$errorMessage = "";
+$errorMessageIgnored = "";
+$errorNr = 0;
+
+
+//////////////// MAIL FUNCTIONS SPECIAL ////////////////////
+
+//			
+function sendMailAutologin($postData, $errorStatus, $errorCode, $errorMessage){
+	global $to;
+	global $subject_autologin;
+	global $errorMessageIgnored;
+	
+	$successString = ($errorStatus?"OK":"NOK");
+	
+	$myMessage = "AUTLOLOGIN ";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "Success: " . $successString . "<br>";
+	$myMessage .= "errorCode: ".$errorCode . "<br>";
+	$myMessage .= "errorMessage: ".$errorMessage . "<br>";
+	$myMessage .= "errorMessageIgnored: ".$errorMessageIgnored . "<br>";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "POST DATA: <br>" . $postData . "<br>";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "Date and time: ". getTimeStamp() . "<br>";
+	$myMessage .= "Domain [call]: ". $_SERVER["SERVER_NAME"]." [".$_SERVER['PHP_SELF']."]<br>";
+	$myMessage .= "Remote IP: ". $_SERVER["REMOTE_ADDR"]."<br>";
+
+	//send mail to ADMIN
+	mailPHPMailer_LOCAL($to,$subject_autologin . " >> ". $successString, $myMessage);
+}
+//
+//			
+function sendMailAutologinLogged($postData, $errorStatus, $errorCode, $errorMessage, $subjectMessage){
+	global $to;
+	global $subject_autologin;
+	global $errorMessageIgnored;
+	
+	$successString = ($errorStatus?"OK":"NOK");
+	
+	$myMessage = "AUTLOLOGIN ";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "Success: " . $successString . "<br>";
+	$myMessage .= "errorCode: ".$errorCode . "<br>";
+	$myMessage .= "errorMessage: ".$errorMessage . "<br>";
+	$myMessage .= "errorMessageIgnored: ".$errorMessageIgnored . "<br>";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "POST DATA: <br>" . $postData . "<br>";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "Date and time: ". getTimeStamp() . "<br>";
+	$myMessage .= "Domain [call]: ". $_SERVER["SERVER_NAME"]." [".$_SERVER['PHP_SELF']."]<br>";
+	$myMessage .= "Remote IP: ". $_SERVER["REMOTE_ADDR"]."<br>";
+
+	//send mail to ADMIN
+	mailPHPMailer_LOCAL($to,$subject_autologin . " >> ". $successString . " >> " . $subjectMessage, $myMessage);
+}
+
+function sendMailtest($postData, $errorStatus, $errorCode, $errorMessage){
+	global $to;
+	global $subject_api_call_progress;
+	global $errorMessageIgnored;
+	
+	$successString = ($errorStatus?"OK":"NOK");
+	
+	$myMessage = "TEST ";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "Success: " . $successString . "<br>";
+	$myMessage .= "errorCode: ".$errorCode . "<br>";
+	$myMessage .= "errorMessage: ".$errorMessage . "<br>";
+	$myMessage .= "errorMessageIgnored: ".$errorMessageIgnored . "<br>";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "POST DATA: <br>" . $postData . "<br>";
+	$myMessage .= "<HR>";
+	
+	$myMessage .= "Date and time: ". getTimeStamp() . "<br>";
+	$myMessage .= "Domain [call]: ". $_SERVER["SERVER_NAME"]." [".$_SERVER['PHP_SELF']."]<br>";
+	$myMessage .= "Remote IP: ". $_SERVER["REMOTE_ADDR"]."<br>";
+
+
+	mailPHPMailer_LOCAL($to,$subject_api_call_progress . " >> ". $successString, $myMessage);
+}
+
+
+//////////////// MAIL FUNCTIONS GENERAL ////////////////////
+
+function spyMail($myVarName, $myVarValue){
+	global $to;
+
+	$myTo =  $to;	
+	$mySubject = "DEBUG MAIL ".$_SERVER["SERVER_NAME"]." [".getTimeStamp()."]";
+
+	$myMessage = "Debug data from: ";
+	$myMessage .= "<HR>";
+	$myMessage .= $myVarName.": ".$myVarValue;
+	$myMessage .= "<HR>";
+	$myMessage .= "Date and time: ". getTimeStamp() . "<br>";
+	$myMessage .= "Domain [call]: ". $_SERVER["SERVER_NAME"]." [".$_SERVER['PHP_SELF']."]<br>";
+	$myMessage .= "Remote IP: ". $_SERVER["REMOTE_ADDR"]."<br>";
+
+	mailPHPMailer_LOCAL($myTo, $mySubject , $myMessage);
+
+}
+
+
+function mailDataError($myErrorStr, $myValuesArray){
+	global $to;
+
+	$myValuesList = implode("|<BR>", $myValuesArray);
+	
+	$myTo =  $to;
+	$mySubject = "*** DATA ERROR MAIL ".$_SERVER["SERVER_NAME"]." [".getTimeStamp()."]";
+
+	$myMessage = "***** DATA ERROR OCCURED *****";
+	$myMessage .= "<HR>";
+	$myMessage .= "Script: ".$_SERVER["SERVER_NAME"]."".$_SERVER['PHP_SELF']."<HR>";	
+	$myMessage .= "Error: ".$myErrorStr."<HR>";
+	$myMessage .= "Values: <BR>".$myValuesList."<HR>";		
+	$myMessage .= "<HR>";
+	$myMessage .= "Date and time: ". getTimeStamp() . "<br>";
+	$myMessage .= "Domain [call]: ". $_SERVER["SERVER_NAME"]." [".$_SERVER['PHP_SELF']."]<br>";
+	$myMessage .= "Remote IP: ". $_SERVER["REMOTE_ADDR"]."<br>";
+
+	mailPHPMailer_LOCAL($myTo,$mySubject, $myMessage);
+
+}
+//
+function mailSQLError($mySQL, $myValuesArray, $myException){
+	global $to;
+	
+	$myLine = $myException->getLine();
+	$myErrorMsg = $myException->getMessage();
+	$myTrace = $myException->__toString();
+	$myValuesList = implode("<BR>", $myValuesArray);
+	
+	$myTo =  $to;
+	$mySubject = "*** SQL ERROR MAIL ".$_SERVER["SERVER_NAME"]." [".getTimeStamp()."]";
+
+	$myMessage = "***** SQL ERROR OCCURED *****";
+	$myMessage .= "<HR>";
+	$myMessage .= "Script: ".$_SERVER["SERVER_NAME"]."".$_SERVER['PHP_SELF']."<br>";	
+	$myMessage .= "Line: ".$myLine."<br>";
+	$myMessage .= "SQL: ".$mySQL."<HR>";
+	$myMessage .= "Error: ".$myErrorMsg."<HR>";
+	$myMessage .= "Values: <BR>".$myValuesList."<HR>";	
+	$myMessage .= "Trace: ".$myTrace."<br>";	
+	$myMessage .= "<HR>";
+	$myMessage .= "Date and time: ". getTimeStamp() . "<br>";
+	$myMessage .= "Domain [call]: ". $_SERVER["SERVER_NAME"]." [".$_SERVER['PHP_SELF']."]<br>";
+	$myMessage .= "Remote IP: ". $_SERVER["REMOTE_ADDR"]."<br>";
+
+	mailPHPMailer_LOCAL($myTo,$mySubject, $myMessage);
+
+}
+//
+function mailPHPMailer_LOCAL($to, $subject, $message){
+	global $bccAlways;
+	global $fromEmail;
+	global $fromName;
+	global $subjecAlways;
+	
+
+	//SENDER
+	$mail = new PHPMailer();
+	$mail->IsHTML(true);
+	$mail->CharSet = 'UTF-8';
+	$mail->Encoding = 'base64';
+
+	$myToListArray = explode(",", $to);
+	$mySize = count($myToListArray);
+	for ($i = 0; $i < $mySize; $i++){
+		$mail->AddAddress($myToListArray[$i]);
+	}
+	
+	//HEADERS
+	$mail->Sender = $fromEmail;
+	$mail->From     =  $fromEmail;
+	$mail->FromName =  $fromName;
+	
+	
+
+	//ALWAYS TO BCC
+	$mail->addBCC($bccAlways);	
+	
+
+	//SUBJECT + MESSAGE
+	$mail->Subject = $subjecAlways.$subject;
+	$mail->Body    =  $message ;
+	$mail->AltBody = "This is a HTML mail";
+
+	$mail->WordWrap = 50;
+		
+	//SEND
+	if(!$mail->send()) {
+ 	  echo 'Message was not sent.';
+  	//echo 'Mailer error: ' . $mail->ErrorInfo;
+	} else {
+	  echo 'Message has been sent.';
+	}
+
+}
+
+
+//////////////// HASH FUNCTIONS ////////////////////
+
+function makeSessionID(){
+	$mySessionLength = 64;
+	$mySession = "vvr_";
+    $myCharactersAll = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $myLen = strlen($myCharactersAll);
+    for ($i = 0; $i < $mySessionLength; $i++) {
+        $mySession = $mySession.$myCharactersAll[rand(0, $myLen - 1)];
+    }
+	return $mySession;
+}
+
+function makeActivationID(){
+	$mySessionLength = 128;
+	$mySession = "vva_";
+    $myCharactersAll = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $myLen = strlen($myCharactersAll);
+    for ($i = 0; $i < $mySessionLength; $i++) {
+        $mySession = $mySession.$myCharactersAll[rand(0, $myLen - 1)];
+    }
+	return $mySession;
+}
+
+//////////////// DATE FUNTIONS /////////////////////////////////
+
+function getTimeStamp(){
+	$today = getdate();
+	$day = $today['mday'];
+	$month = $today['mon'];
+	$year = $today['year'];
+	$hour = $today['hours'];
+	$minute = $today['minutes'];
+	$seconds = $today['seconds'];
+	if ($day < 10)  $day = '0'.$day;
+	if ($month < 10)  $month = '0'.$month;
+	if ($hour < 10)  $hour = '0'.$hour;
+	if ($minute < 10)  $minute = '0'.$minute;
+	if ($seconds < 10)  $seconds = '0'.$seconds;
+	$datetime = $year.'-'.$month.'-'.$day.' '.$hour.':'.$minute.':'.$seconds;
+	return $datetime;
+}
+
+
+//////////////// STRING FUNTIONS /////////////////////////////////
+
+function parseSpecialXMLchars($myStr){
+	$myXMLStr = utf8_encode($myStr);
+return $myXMLStr;
+}
+
+function parseSpecialXMLcharsBack($myXMLStr){
+	$myStr = utf8_decode($myXMLStr);
+return $myStr;
+}
+
+function cleanUpSQLStr($mySQLStr){
+	$myStr = str_replace("'","`",$mySQLStr);
+	$myStr = str_replace(";","",$myStr);
+return $myStr;
+}
+
+
+function cleanUpHTMLStr($myHTMLStr){
+	$myStr = $myHTMLStr;
+	$myStr = str_replace("<p>"," ",$myStr);
+	$myStr = str_replace("</p>"," ",$myStr);
+return $myStr;
+}
+
+
+function formatMoney($myValue){
+	$myValueP = str_replace (".", "", $myValue);
+	$myValueP = str_replace (",", ".", $myValueP);
+	return number_format($myValueP, 2, ',', '.');
+}
+
+
+//////////////// DB FUNTIONS /////////////////////////////////
+function connectDB_PDO(){
+	
+	global $DataBase_host;
+	global $DataBase_user;
+	global $DataBase_password;
+	global $DataBase_name;
+	global $PDO;
+	
+	$myDBConnectSuccess = true;
+
+	try {
+		$PDO = new PDO("mysql:dbname=".$DataBase_name.";host=".$DataBase_host, $DataBase_user, $DataBase_password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
+		} catch (PDOException $ex) {
+			//echo 'Connection failed: ' . $ex->getMessage();
+			$myDBConnectSuccess = false;
+		}
+
+	if ($myDBConnectSuccess){
+		$PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	}
+		
+	return $myDBConnectSuccess;
+}
+
+
+//////////////// ERRORS /////////////////////////
+function setError($inputCode, $inputMessage){
+	global $errorStatus, $errorCode, $errorMessage, $errorNr;
+	
+	$errorStatus = false;
+	$errorCode = $inputCode;
+	$errorMessage = $inputMessage;			
+	$errorNr++;
+	
+}
+
+function addErrorIgnored($inputCode, $inputMessage){
+	global $errorStatus, $errorCode, $errorMessage, $errorMessageIgnored, $errorNr;
+	
+	//$errorStatus = false;
+	//$errorCode = $inputCode;
+	//$errorMessage = $inputMessage;
+	$errorMessageIgnored = $errorMessageIgnored . "\n<br> " . $inputCode . " ==>> " . $inputMessage;
+	$errorNr++;
+	
+}
+
+function isError(){
+	global $errorStatus;
+	
+	return (!$errorStatus);
+}
+
+
+//////////////// API TESTING /////////////////////////
+
+//
+function fncPDOTestResults($sessionid, $testName,$startTime,$endTime,$duration,$nrOfQuestions,$goodAnswers,$clientId,$JSON){
+	global $PDO;
+	
+
+	try {
+		
+		$sql = "SELECT * FROM users WHERE sessionid = ? AND active = 1";
+			
+			$stmt = $PDO->prepare($sql);
+			$stmt->execute([$sessionid]);			
+			$result = $stmt->fetch();
+			
+			if ($result){
+				$userid = $result["userid"];
+				
+				//log inlog
+				$sql = "INSERT INTO results (`userid`, `clientId`, `testName`,`testTimeStart`,`testTimeEnd`,`testTimeTotalSeconds`,`testResultCounter`,`testResultGoodCounter`,`testAnswers`) VALUES (?,?,?,?,?,?,?,?,?)";
+				
+				if ($PDO->prepare($sql)->execute([$userid, $clientId, $testName,$startTime, $endTime,$duration,$nrOfQuestions,$goodAnswers,$JSON])){
+					//$testNr = $PDO->lastInsertId();
+				}
+				
+			} else {
+				
+				//log inlog
+				$sql = "INSERT INTO results (`clientId`, `testName`,`testTimeStart`,`testTimeEnd`,`testTimeTotalSeconds`,`testResultCounter`,`testResultGoodCounter`,`testAnswers`) VALUES (?,?,?,?,?,?,?,?)";
+				
+				if ($PDO->prepare($sql)->execute([$clientId, $testName,$startTime, $endTime,$duration,$nrOfQuestions,$goodAnswers,$JSON])){
+					//$testNr = $PDO->lastInsertId();
+				}
+			}
+		
+		
+			
+			
+			
+	} catch (PDOexception $e) {
+				  // echo "Error is: " . $e-> etmessage();	   
+				  setError(1, "This is error from fncPDOTestResults, Error is: " . $e-> getmessage());
+	}	 		
+
+}
+//
+function fncPDOClientLog($myCallURL,$myOs,$myOsVersion,$myBrowser,$myBrowserVersion,$myEngine,$myDevice,$myDeviceType,$myDeviceVendor,$myUserAgent,$myResolution,$myColorDepth,$ip,$host){
+	global $PDO;
+	
+	$clientID = 0;
+	
+	try {
+			//log inlog
+			$sql = "INSERT INTO client (`url`, `ip`,`host`,`os`,`os_version`,`browser`,`browser_version`,`engine`,`engine_version`,`device`,`device_vendor`,`resolution`,`color_depth`,`user_agent`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			
+			if ($PDO->prepare($sql)->execute([$myCallURL, $ip,$host, $myOs,$myOsVersion,$myBrowser,$myBrowserVersion,$myEngine,$myDeviceType,$myDevice,$myDeviceVendor,$myResolution,$myColorDepth, $myUserAgent])){
+				$clientID = $PDO->lastInsertId();
+			}
+			
+	} catch (PDOexception $e) {
+				  // echo "Error is: " . $e-> etmessage();	   
+				  setError(1, "This is error from fncPDOClientLog, Error is: " . $e-> getmessage());
+	}	 		
+	
+	
+	return $clientID;
+
+}
+
+?>

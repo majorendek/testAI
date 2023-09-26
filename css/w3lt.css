@@ -1,0 +1,213 @@
+/*
+company: Forward Thinking s.r.o.
+devloper: Marian Rendek
+date: 7.11.2019
+
+css
+*/
+
+
+/* =====================  GENERAL PART ===========================*/
+html * {
+   font-family: Helvetica, Arial;
+}
+
+/* Change styles for span on extra small screens */
+@media screen and (max-width: 300px) {
+  span.password {
+     display: block;
+     float: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="w3-display-"] {
+    width: 90%;
+  }
+  
+}
+
+.w3lt-label { 
+	margin: 0 0 0 0 !important;
+	padding: 0 0 0 0 !important;
+	vertical-align: top !important;
+	white-space: nowrap !important;
+	}
+
+
+.w3lt-input { 
+	margin: 0 0 0 0 !important;
+	padding: 0px 0px 0px 5px !important;
+	font-weight: bold !important; 
+	vertical-align: top !important;
+	}
+	
+.w3lt-border-red {
+    border-style:solid;
+    border-width:2px;  
+    border-color:red;
+}
+
+.w3lt-tab-button-frame {
+		border-right: 5px solid #f1f6fa !important;
+}
+
+/* =====================  W3CSS MODIFYCATION  ===========================*/
+.w3lt-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
+.w3lt-display-bottomleft{position:absolute;left:0;bottom:0}.w3-display-bottomright{position:absolute;right:0;bottom:0}
+.w3lt-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.w3lt-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3lt-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3lt-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3lt-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3lt-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+.w3lt-display-position{position:absolute}
+
+
+/* =====================  LOADER ===========================*/
+
+.loaderContainer{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%)
+}
+
+.loader {	
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid #aaaaaa;
+  border-bottom: 16px solid #aaaaaa;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* =====================  LOGIN ===========================*/
+
+form {
+	//border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+span.password {
+  float: right;
+  padding-top: 0px;
+}
+
+.container {
+	max-width: 768px;
+  padding: 16px;
+		
+}
+
+/* =====================  SUPERSCHOPNOSTI ===========================*/
+/*
+#superschopnostForm_ID input[type="number"] {
+	width: 80%;
+}
+*/
+
+.example {
+	min-width: 30px;
+	width: 80%;
+}
+
+.extend {
+	width: 30px;
+}
+
+.exampleSameSize {
+	min-width: 30px !important;
+	width: 80% !important;
+}
+
+#exerciseResultPage p {
+	margin: 0;
+}
+
+/* =====================  DASHBOARD ===========================*/
+@media only screen and (max-width: 768px) {
+	#dashboardContent_ID {
+		width: 90% !important;
+	}
+}
+
+#dashboardChildDataVisual_ID {
+	padding: 20px 0;
+	background: #d2e2f1;
+}
+
+#dashboardSumResults_ID {
+	width: 100%;
+}
+
+#dashboardSumResults_ID>div {
+	width: 330px;
+	margin: auto;
+}
+
+#dashboardSumResults_ID>div>div {
+	display: inline-block;
+}
+
+#dashboardSumResults_ID p {
+	margin: 0;
+	display: inline-block;
+}
+
+#dashboardSumResults_ID p.text {
+	margin: 0 5px 0 30px;
+	float: left;
+	width: 176px;
+}
+
+#dashboardSumResults_ID span {
+	padding: 0 8.5px;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+
+/* =====================  ADMIN ===========================*/
+
+#adminSelectButtons #addChild_id {
+	//margin: 0;
+  //padding: 16px 23px;
+}
