@@ -92,26 +92,10 @@ function fncTest_initializeElements(){
 		$( "#testButtonBegin_ID" ).click(function() {fncTest_generateScreenTest();});
 		
 		//testPage
-		$( "#testButtonAnswer_id_0" ).click(function(){
-			if (gTestMode == "test"){
-				fncTest_btnAnswerClick(0);
-			}
-		});
-		$( "#testButtonAnswer_id_1" ).click(function(){
-			if (gTestMode == "test"){
-				fncTest_btnAnswerClick(1);
-			}
-		});
-		$( "#testButtonAnswer_id_2" ).click(function(){
-			if (gTestMode == "test"){
-				fncTest_btnAnswerClick(2);
-			}
-		});
-		$( "#testButtonAnswer_id_3" ).click(function(){
-			if (gTestMode == "test"){
-				fncTest_btnAnswerClick(3);
-			}
-		});
+		$( "#testButtonAnswer_id_0" ).click(handleAnswerClick);
+		$( "#testButtonAnswer_id_1" ).click(handleAnswerClick);
+		$( "#testButtonAnswer_id_2" ).click(handleAnswerClick);
+		$( "#testButtonAnswer_id_3" ).click(handleAnswerClick);
 		
 		$( "#testButtonPrevious_ID" ).click(function(){
 			if (gTestMode == "test"){
@@ -139,7 +123,12 @@ function fncTest_initializeElements(){
 			window.location.href = "../../blank.html";
 		});
 		
-											
+		function handleAnswerClick() {
+			if (gTestMode == "test") {
+				var answerId = parseInt($(this).attr("id").split("_")[1]);
+				fncTest_btnAnswerClick(answerId);
+			}
+		}
 }
 //
 function fncTest_loadJsonSuccess(myJson){
