@@ -75,15 +75,14 @@ function fncSetModuleExtern(){
 function fncTest_resize(){
 	//called when window is resized	
 }
-//
 function fncTest_hideAllScreens(){
-	
-	fncGeneral_elementHide("testStartPage");
-	fncGeneral_elementHide("testPage");
-	fncGeneral_elementHide("testResultPage");
-	fncGeneral_elementHide("testEndPage");
-	
-
+  // Array of element ids
+  const elementsToHide = ["testStartPage", "testPage", "testResultPage", "testEndPage"];
+  
+  // Loop through the array and call fncGeneral_elementHide for each id
+  for (let i = 0; i < elementsToHide.length; i++) {
+    fncGeneral_elementHide(elementsToHide[i]);
+  }
 }
 //
 function fncTest_initializeElements(){
